@@ -1,0 +1,475 @@
+conv1:
+	Layer Size:  3 x 128
+	Output Size: 32
+conv2:
+	Layer Size:  128 x 128
+	Output Size: 32
+norm2:
+	Layer Size:  128 x 128
+	Output Size: 32
+conv3:
+	Layer Size:  128 x 256
+	Output Size: 16
+norm3:
+	Layer Size:  256 x 256
+	Output Size: 16
+conv4:
+	Layer Size:  256 x 256
+	Output Size: 16
+norm4:
+	Layer Size:  256 x 256
+	Output Size: 16
+conv5:
+	Layer Size:  256 x 512
+	Output Size: 8
+norm5:
+	Layer Size:  512 x 512
+	Output Size: 8
+conv6:
+	Layer Size:  512 x 512
+	Output Size: 8
+norm6:
+	Layer Size:  512 x 512
+	Output Size: 8
+dense1:
+	Layer Size:  8192 x 1024
+	Output Size: 1
+norm7:
+	Layer Size:  1024 x 1024
+	Output Size: 1
+dense2:
+	Layer Size:  1024 x 1024
+	Output Size: 1
+norm8:
+	Layer Size:  1024 x 1024
+	Output Size: 1
+dense3:
+	Layer Size:  1024 x 10
+	Output Size: 1
+val=: -1.755789 maxval = -1.755789 
+val=: 1.979026 maxval = 1.979026 
+  Pred/Label:	 3/ 3	[ OK ]
+val=: -1.907569 maxval = -1.907569 
+val=: -1.875529 maxval = -1.875529 
+val=: -1.712605 maxval = -1.712605 
+val=: 2.074022 maxval = 2.074022 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -1.856976 maxval = -1.856976 
+val=: -1.855296 maxval = -1.855296 
+val=: -1.777946 maxval = -1.777946 
+val=: -1.700855 maxval = -1.700855 
+val=: 2.123117 maxval = 2.123117 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: 1.735156 maxval = 1.735156 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -5.246734 maxval = -5.246734 
+val=: -1.739914 maxval = -1.739914 
+val=: -1.609815 maxval = -1.609815 
+val=: -1.599623 maxval = -1.599623 
+val=: 2.506675 maxval = 2.506675 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -3.577152 maxval = -3.577152 
+val=: -2.028369 maxval = -2.028369 
+val=: -1.966694 maxval = -1.966694 
+val=: -1.924321 maxval = -1.924321 
+val=: -1.918187 maxval = -1.918187 
+val=: -1.498392 maxval = -1.498392 
+val=: 2.187276 maxval = 2.187276 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -2.236426 maxval = -2.236426 
+val=: 0.942719 maxval = 0.942719 
+  Pred/Label:	 1/ 1	[ OK ]
+val=: -3.045921 maxval = -3.045921 
+val=: -2.138845 maxval = -2.138845 
+val=: -2.046301 maxval = -2.046301 
+val=: -1.675547 maxval = -1.675547 
+val=: 1.628329 maxval = 1.628329 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -2.084646 maxval = -2.084646 
+val=: -1.653378 maxval = -1.653378 
+val=: 1.564295 maxval = 1.564295 
+  Pred/Label:	 3/ 3	[ OK ]
+val=: -1.755789 maxval = -1.755789 
+val=: 2.183076 maxval = 2.183076 
+  Pred/Label:	 1/ 1	[ OK ]
+val=: 2.190496 maxval = 2.190496 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -2.312316 maxval = -2.312316 
+val=: -1.912987 maxval = -1.912987 
+val=: -1.826737 maxval = -1.826737 
+val=: -1.802086 maxval = -1.802086 
+val=: -1.627061 maxval = -1.627061 
+val=: 2.717546 maxval = 2.717546 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -2.109943 maxval = -2.109943 
+val=: -1.624532 maxval = -1.624532 
+val=: -1.622393 maxval = -1.622393 
+val=: 1.589162 maxval = 1.589162 
+  Pred/Label:	 5/ 5	[ OK ]
+val=: -1.781086 maxval = -1.781086 
+val=: -1.646986 maxval = -1.646986 
+val=: 2.307654 maxval = 2.307654 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -2.211130 maxval = -2.211130 
+val=: -1.797605 maxval = -1.797605 
+val=: 2.362653 maxval = 2.362653 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -2.008756 maxval = -2.008756 
+val=: -1.912987 maxval = -1.912987 
+val=: -1.769951 maxval = -1.769951 
+val=: -1.631570 maxval = -1.631570 
+val=: -1.272875 maxval = -1.272875 
+val=: 1.877640 maxval = 1.877640 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -1.856976 maxval = -1.856976 
+val=: -1.671579 maxval = -1.671579 
+val=: 2.449628 maxval = 2.449628 
+  Pred/Label:	 5/ 5	[ OK ]
+val=: -1.806382 maxval = -1.806382 
+val=: -1.624532 maxval = -1.624532 
+val=: 2.063430 maxval = 2.063430 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -2.135240 maxval = -2.135240 
+val=: -1.884142 maxval = -1.884142 
+val=: -1.696172 maxval = -1.696172 
+val=: 1.853092 maxval = 1.853092 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -5.297328 maxval = -5.297328 
+val=: -2.143751 maxval = -2.143751 
+val=: -1.720765 maxval = -1.720765 
+val=: -1.507024 maxval = -1.507024 
+val=: -1.498392 maxval = -1.498392 
+val=: 2.719607 maxval = 2.719607 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -2.185833 maxval = -2.185833 
+val=: -1.076467 maxval = -1.076467 
+val=: -0.289794 maxval = -0.289794 
+val=: -0.243127 maxval = -0.243127 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: 2.215794 maxval = 2.215794 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -1.578712 maxval = -1.578712 
+val=: 1.859380 maxval = 1.859380 
+  Pred/Label:	 4/ 4	[ OK ]
+val=: -2.008756 maxval = -2.008756 
+val=: -1.797605 maxval = -1.797605 
+val=: -1.751972 maxval = -1.751972 
+val=: -1.681333 maxval = -1.681333 
+val=: 2.514750 maxval = 2.514750 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -2.008756 maxval = -2.008756 
+val=: -1.917508 maxval = -1.917508 
+val=: 1.525310 maxval = 1.525310 
+  Pred/Label:	 4/ 5	[FAIL]
+val=: -1.679899 maxval = -1.679899 
+val=: 1.205798 maxval = 1.205798 
+  Pred/Label:	 2/ 2	[ OK ]
+val=: -2.008756 maxval = -2.008756 
+val=: 0.754377 maxval = 0.754377 
+  Pred/Label:	 4/ 4	[ OK ]
+val=: 2.595244 maxval = 2.595244 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -1.882272 maxval = -1.882272 
+val=: -1.532721 maxval = -1.532721 
+val=: 2.540099 maxval = 2.540099 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -4.740800 maxval = -4.740800 
+val=: -2.086061 maxval = -2.086061 
+val=: -1.966694 maxval = -1.966694 
+val=: -1.826737 maxval = -1.826737 
+val=: -1.700855 maxval = -1.700855 
+val=: 2.400208 maxval = 2.400208 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -2.717064 maxval = -2.717064 
+val=: -0.759167 maxval = -0.759167 
+val=: 1.069381 maxval = 1.069381 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -1.604009 maxval = -1.604009 
+val=: 2.500243 maxval = 2.500243 
+  Pred/Label:	 5/ 5	[ OK ]
+val=: -2.059350 maxval = -2.059350 
+val=: -0.196001 maxval = -0.196001 
+val=: 0.291818 maxval = 0.291818 
+  Pred/Label:	 4/ 4	[ OK ]
+val=: -1.679899 maxval = -1.679899 
+val=: -1.597800 maxval = -1.597800 
+val=: -1.378535 maxval = -1.378535 
+val=: 2.272473 maxval = 2.272473 
+  Pred/Label:	 5/ 5	[ OK ]
+val=: -1.705196 maxval = -1.705196 
+val=: 2.311954 maxval = 2.311954 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -3.324184 maxval = -3.324184 
+val=: -0.989931 maxval = -0.989931 
+val=: -0.411774 maxval = -0.411774 
+val=: 0.257494 maxval = 0.257494 
+  Pred/Label:	 8/ 2	[FAIL]
+val=: -1.831679 maxval = -1.831679 
+val=: 1.551007 maxval = 1.551007 
+  Pred/Label:	 4/ 4	[ OK ]
+val=: -1.629305 maxval = -1.629305 
+val=: -0.672630 maxval = -0.672630 
+val=: 1.323323 maxval = 1.323323 
+  Pred/Label:	 9/ 1	[FAIL]
+val=: -2.438800 maxval = -2.438800 
+val=: -1.884142 maxval = -1.884142 
+val=: -1.686908 maxval = -1.686908 
+val=: -1.473084 maxval = -1.473084 
+val=: 2.438701 maxval = 2.438701 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -1.629305 maxval = -1.629305 
+val=: 2.070010 maxval = 2.070010 
+  Pred/Label:	 5/ 5	[ OK ]
+val=: -1.604009 maxval = -1.604009 
+val=: 2.193451 maxval = 2.193451 
+  Pred/Label:	 4/ 4	[ OK ]
+val=: -5.272031 maxval = -5.272031 
+val=: -1.999524 maxval = -1.999524 
+val=: -1.991287 maxval = -1.991287 
+val=: -1.948717 maxval = -1.948717 
+val=: -1.776778 maxval = -1.776778 
+val=: 2.639757 maxval = 2.639757 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -1.553415 maxval = -1.553415 
+val=: -1.346545 maxval = -1.346545 
+val=: 1.954886 maxval = 1.954886 
+  Pred/Label:	 7/ 5	[FAIL]
+val=: -4.563723 maxval = -4.563723 
+val=: -1.941833 maxval = -1.941833 
+val=: -1.851133 maxval = -1.851133 
+val=: -1.789699 maxval = -1.789699 
+val=: -1.726162 maxval = -1.726162 
+val=: 2.852690 maxval = 2.852690 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: 2.190496 maxval = 2.190496 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -2.059350 maxval = -2.059350 
+val=: -1.624532 maxval = -1.624532 
+val=: -1.549008 maxval = -1.549008 
+val=: 2.362653 maxval = 2.362653 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -1.932866 maxval = -1.932866 
+val=: 1.125169 maxval = 1.125169 
+  Pred/Label:	 3/ 3	[ OK ]
+val=: 0.141464 maxval = 0.141464 
+  Pred/Label:	 0/ 9	[FAIL]
+val=: -1.907569 maxval = -1.907569 
+val=: -1.573207 maxval = -1.573207 
+val=: 2.334790 maxval = 2.334790 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -3.450668 maxval = -3.450668 
+val=: -2.345670 maxval = -2.345670 
+val=: -1.351870 maxval = -1.351870 
+val=: 1.468629 maxval = 1.468629 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -2.008756 maxval = -2.008756 
+val=: -1.815396 maxval = -1.815396 
+val=: -1.751470 maxval = -1.751470 
+val=: -1.518517 maxval = -1.518517 
+val=: 2.159857 maxval = 2.159857 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -1.755789 maxval = -1.755789 
+val=: -1.729154 maxval = -1.729154 
+val=: -1.558419 maxval = -1.558419 
+val=: 1.730354 maxval = 1.730354 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: 0.849771 maxval = 0.849771 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -1.755789 maxval = -1.755789 
+val=: 1.344732 maxval = 1.344732 
+  Pred/Label:	 3/ 3	[ OK ]
+val=: -1.831679 maxval = -1.831679 
+val=: -1.704758 maxval = -1.704758 
+val=: 1.951283 maxval = 1.951283 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -2.059350 maxval = -2.059350 
+val=: -1.797605 maxval = -1.797605 
+val=: -1.751972 maxval = -1.751972 
+val=: 2.074022 maxval = 2.074022 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -2.034053 maxval = -2.034053 
+val=: -1.653378 maxval = -1.653378 
+val=: 1.927750 maxval = 1.927750 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -3.071218 maxval = -3.071218 
+val=: -1.336077 maxval = -1.336077 
+val=: -0.119023 maxval = -0.119023 
+  Pred/Label:	 3/ 7	[FAIL]
+val=: -1.148668 maxval = -1.148668 
+val=: -0.376323 maxval = -0.376323 
+val=: 0.425002 maxval = 0.425002 
+  Pred/Label:	 5/ 4	[FAIL]
+val=: -2.868844 maxval = -2.868844 
+val=: -1.336077 maxval = -1.336077 
+val=: -1.192443 maxval = -1.192443 
+val=: -1.095860 maxval = -1.095860 
+val=: 0.962915 maxval = 0.962915 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -1.983459 maxval = -1.983459 
+val=: -1.480304 maxval = -1.480304 
+val=: 2.579014 maxval = 2.579014 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -1.831679 maxval = -1.831679 
+val=: -1.597800 maxval = -1.597800 
+val=: 0.804619 maxval = 0.804619 
+  Pred/Label:	 5/ 3	[FAIL]
+val=: -3.804822 maxval = -3.804822 
+val=: -1.768760 maxval = -1.768760 
+val=: 2.160660 maxval = 2.160660 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -1.958163 maxval = -1.958163 
+val=: -1.105313 maxval = -1.105313 
+val=: -0.704525 maxval = -0.704525 
+val=: 1.336083 maxval = 1.336083 
+  Pred/Label:	 5/ 3	[FAIL]
+val=: -3.981899 maxval = -3.981899 
+val=: -1.682223 maxval = -1.682223 
+val=: -1.352837 maxval = -1.352837 
+val=: 2.293742 maxval = 2.293742 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -1.781086 maxval = -1.781086 
+val=: 2.632190 maxval = 2.632190 
+  Pred/Label:	 2/ 2	[ OK ]
+val=: -2.211130 maxval = -2.211130 
+val=: 2.067694 maxval = 2.067694 
+  Pred/Label:	 1/ 1	[ OK ]
+val=: -1.528119 maxval = -1.528119 
+val=: 2.435446 maxval = 2.435446 
+  Pred/Label:	 2/ 2	[ OK ]
+val=: -2.691767 maxval = -2.691767 
+val=: -2.040473 maxval = -2.040473 
+val=: 0.002957 maxval = 0.002957 
+  Pred/Label:	 3/ 3	[ OK ]
+val=: -1.958163 maxval = -1.958163 
+val=: -1.917508 maxval = -1.917508 
+val=: -1.558419 maxval = -1.558419 
+val=: 2.389062 maxval = 2.389062 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -1.022185 maxval = -1.022185 
+val=: 1.500913 maxval = 1.500913 
+  Pred/Label:	 2/ 2	[ OK ]
+val=: -4.285460 maxval = -4.285460 
+val=: -2.201442 maxval = -2.201442 
+val=: -1.631570 maxval = -1.631570 
+val=: 2.134043 maxval = 2.134043 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -2.034053 maxval = -2.034053 
+val=: -1.826451 maxval = -1.826451 
+val=: -1.725356 maxval = -1.725356 
+val=: 1.754902 maxval = 1.754902 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -1.806382 maxval = -1.806382 
+val=: -1.797605 maxval = -1.797605 
+val=: -1.645506 maxval = -1.645506 
+val=: 2.024926 maxval = 2.024926 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: 1.633969 maxval = 1.633969 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -1.806382 maxval = -1.806382 
+val=: 2.263295 maxval = 2.263295 
+  Pred/Label:	 2/ 2	[ OK ]
+val=: -1.654602 maxval = -1.654602 
+val=: 2.210556 maxval = 2.210556 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: -1.679899 maxval = -1.679899 
+val=: -1.422614 maxval = -1.422614 
+val=: 1.857046 maxval = 1.857046 
+  Pred/Label:	 3/ 3	[ OK ]
+val=: -1.882272 maxval = -1.882272 
+val=: -1.841094 maxval = -1.841094 
+val=: 1.057698 maxval = 1.057698 
+  Pred/Label:	 5/ 3	[FAIL]
+val=: -1.856976 maxval = -1.856976 
+val=: 1.632164 maxval = 1.632164 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -1.781086 maxval = -1.781086 
+val=: -1.768760 maxval = -1.768760 
+val=: -1.686908 maxval = -1.686908 
+val=: 1.902188 maxval = 1.902188 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -2.059350 maxval = -2.059350 
+val=: 1.663857 maxval = 1.663857 
+  Pred/Label:	 1/ 1	[ OK ]
+val=: -1.907569 maxval = -1.907569 
+val=: 1.952312 maxval = 1.952312 
+  Pred/Label:	 1/ 1	[ OK ]
+val=: -1.907569 maxval = -1.907569 
+val=: -1.797605 maxval = -1.797605 
+val=: -1.671579 maxval = -1.671579 
+val=: -1.447776 maxval = -1.447776 
+val=: 1.900614 maxval = 1.900614 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -1.351042 maxval = -1.351042 
+val=: 2.214109 maxval = 2.214109 
+  Pred/Label:	 2/ 2	[ OK ]
+val=: -2.034053 maxval = -2.034053 
+val=: -1.745358 maxval = -1.745358 
+val=: -1.275744 maxval = -1.275744 
+val=: 0.703388 maxval = 0.703388 
+  Pred/Label:	 5/ 5	[ OK ]
+val=: -2.109943 maxval = -2.109943 
+val=: -1.393768 maxval = -1.393768 
+val=: 2.705968 maxval = 2.705968 
+  Pred/Label:	 2/ 2	[ OK ]
+val=: -2.287020 maxval = -2.287020 
+val=: -1.595687 maxval = -1.595687 
+val=: 1.385031 maxval = 1.385031 
+  Pred/Label:	 7/ 7	[ OK ]
+val=: -2.160536 maxval = -2.160536 
+val=: -1.970678 maxval = -1.970678 
+val=: -1.966694 maxval = -1.966694 
+val=: -1.918187 maxval = -1.918187 
+val=: -1.852701 maxval = -1.852701 
+val=: 1.730354 maxval = 1.730354 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -1.907569 maxval = -1.907569 
+val=: -1.729154 maxval = -1.729154 
+val=: 2.565449 maxval = 2.565449 
+  Pred/Label:	 9/ 9	[ OK ]
+val=: 2.165200 maxval = 2.165200 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -3.147108 maxval = -3.147108 
+val=: -1.711069 maxval = -1.711069 
+val=: -0.924088 maxval = -0.924088 
+val=: 1.042765 maxval = 1.042765 
+  Pred/Label:	 6/ 3	[FAIL]
+val=: -1.907569 maxval = -1.907569 
+val=: -1.819136 maxval = -1.819136 
+val=: -1.777946 maxval = -1.777946 
+val=: 1.926736 maxval = 1.926736 
+  Pred/Label:	 8/ 8	[ OK ]
+val=: -5.550294 maxval = -5.550294 
+val=: -1.855296 maxval = -1.855296 
+val=: -1.609815 maxval = -1.609815 
+val=: 2.400208 maxval = 2.400208 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -1.781086 maxval = -1.781086 
+val=: 2.219148 maxval = 2.219148 
+  Pred/Label:	 4/ 4	[ OK ]
+val=: -4.007195 maxval = -4.007195 
+val=: -2.345670 maxval = -2.345670 
+val=: -1.942101 maxval = -1.942101 
+val=: -1.704758 maxval = -1.704758 
+val=: 2.320359 maxval = 2.320359 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: -4.690207 maxval = -4.690207 
+val=: -2.143751 maxval = -2.143751 
+val=: -1.622393 maxval = -1.622393 
+val=: -1.609815 maxval = -1.609815 
+val=: -1.599623 maxval = -1.599623 
+val=: 2.506675 maxval = 2.506675 
+  Pred/Label:	 6/ 6	[ OK ]
+val=: 1.229222 maxval = 1.229222 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: 2.089310 maxval = 2.089310 
+  Pred/Label:	 0/ 0	[ OK ]
+val=: -1.932866 maxval = -1.932866 
+val=: -1.371853 maxval = -1.371853 
+val=: 2.144838 maxval = 2.144838 
+  Pred/Label:	 7/ 7	[ OK ]
+
+Errors: 11
+
+conv1               :    100 calls;  0.309 secs total time
+hls top             :    100 calls; 44.600 secs total time
+dense               :    100 calls; 77.307 secs total time

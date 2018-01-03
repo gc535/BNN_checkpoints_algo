@@ -1,0 +1,1670 @@
+(c) Copyright 2012-2017 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2017.2 SW Build 1972098 on Wed Aug 23 11:35:17 MDT 2017
+# Start time    : Mon Dec 04 17:46:21 EST 2017
+# Command line  : sds++ -sds-pf zc706 -sds-hw top Cifar10.cpp -sds-end -poll-mode 1 -Wall -O3 -c -DHLS_COMPILE -O3 -std=c++0x -I../utils -I../minizip -lminizip -lcrypto -lz -MMD -MP -MFcifar10_test_accuracy.d cifar10_test_accuracy.cpp -o cifar10_test_accuracy.o
+# Log file      : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_cifar10_test_accuracy.log
+# Journal file  : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_cifar10_test_accuracy.jou
+# Report file   : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_cifar10_test_accuracy.rpt
+#-----------------------------------------------------------
+
+Create data motion intermediate representation
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/bin/clang_wrapper -I../utils -I../minizip -Wall -DHLS_COMPILE -O3 -std=c++0x -lminizip -lcrypto -lz -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g     -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/target/aarch32-linux/include  -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include   -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1 -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1/arm-linux-gnueabihf -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1/backward -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/6.2.1/include -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/6.2.1/include-fixed -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 -emit-llvm -S /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.cpp -o /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/.llvm/cifar10_test_accuracy.s
+clang: warning: -lminizip: 'linker' input unused
+clang: warning: -lcrypto: 'linker' input unused
+clang: warning: -lz: 'linker' input unused
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_fpo.h:62:2: warning: "Xilinx Floating Point Operator IP core does not provide simulation models for ARM architecture.  Automatically defining HLS_NO_XIL_FPO_LIB in order to avoid this library dependency, although bit-accurate simulation of some functions is no longer possible.  You can make this warning go away by adding this define yourself before including any other files."  [-W#warnings]
+#warning "Xilinx Floating Point Operator IP core does not provide simulation models for ARM architecture.  Automatically defining HLS_NO_XIL_FPO_LIB in order to avoid this library dependency, although bit-accurate simulation of some functions is no longer possible.  You can make this warning go away by adding this define yourself before including any other files." 
+ ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1029:1: warning: unused label 'dot_foreach_tap' [-Wunused-label]
+dot_foreach_tap:
+^~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1054:1: warning: unused label 'fir_blocksrl_foreach_data' [-Wunused-label]
+fir_blocksrl_foreach_data:
+^~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgbase.h:181:2: warning: unused label 'loop_size' [-Wunused-label]
+ loop_size: for(int k=0;k<num;k++) {
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgbase.h:189:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (int j= 0;j<cols;j++)
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgbase.h:186:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(int i= 0;i<rows;i++)
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:65:2: warning: unused label 'loop_wait_for_start' [-Wunused-label]
+ loop_wait_for_start: while (!sof) {
+ ^~~~~~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:96:5: warning: unused label 'loop_wait_for_eol' [-Wunused-label]
+    loop_wait_for_eol: while (!eol) {
+    ^~~~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:91:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:73:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:71:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:125:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:142:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:126:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:173:1: warning: unused label 'loop_pixel' [-Wunused-label]
+loop_pixel:
+^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:181:1: warning: unused label 'loop_channels' [-Wunused-label]
+loop_channels: 
+^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:239:1: warning: unused label 'loop_pixel' [-Wunused-label]
+loop_pixel: 
+^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_io.h:246:1: warning: unused label 'loop_channels' [-Wunused-label]
+loop_channels: 
+^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:356:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:361:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(DST_T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:355:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:388:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:395:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(DST_T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:387:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:432:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(DST_T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:427:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:428:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:459:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:464:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(DST_T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:460:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:491:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:498:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(DST_T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:492:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:530:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:524:2: warning: unused label 'loop_init' [-Wunused-label]
+ loop_init: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:531:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:535:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:571:13: warning: unused label 'loop_channels' [-Wunused-label]
+            loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+            ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:564:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:556:2: warning: unused label 'loop_init' [-Wunused-label]
+ loop_init: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:565:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:643:13: warning: unused label 'loop_output' [-Wunused-label]
+            loop_output: for(HLS_CHANNEL_T k=0;k<HLS_MAT_CN(SRC_T);k++) {
+            ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:596:2: warning: unused label 'loop_init' [-Wunused-label]
+ loop_init: for(HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:601:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:600:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:604:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for(HLS_CHANNEL_T k= 0;k< HLS_MAT_CN(SRC_T);k++) {
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:699:2: warning: unused label 'loop_channels' [-Wunused-label]
+ loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+ ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:717:2: warning: unused label 'loop_channels' [-Wunused-label]
+ loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+ ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:899:2: warning: unused label 'loop_channels' [-Wunused-label]
+ loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(SRC_T); k++) {
+ ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:911:2: warning: unused label 'loop_channels' [-Wunused-label]
+ loop_channels: for (HLS_CHANNEL_T k = 0; k < HLS_MAT_CN(DST_T); k++) {
+ ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1044:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1043:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1061:9: warning: unused variable 'ncount' [-Wunused-variable]
+    int ncount = src.rows * src.cols;
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1188:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1187:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1230:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1229:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1279:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1278:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1343:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1342:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1436:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1437:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1478:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1477:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1502:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1503:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1531:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1532:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1563:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1562:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1596:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1597:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1627:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1628:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1658:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1659:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1693:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j = 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_arithm.h:1692:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for (HLS_SIZE_T i = 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:154:9: warning: unused label 'loop_width' [-Wunused-label]
+        loop_width: for( int n=0;n<F_WIDTH;n++)
+        ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:152:5: warning: unused label 'loop_height' [-Wunused-label]
+    loop_height: for( int m=0;m< F_HEIGHT;m++)
+    ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:180:9: warning: unused label 'loop_width' [-Wunused-label]
+        loop_width: for( int n=0;n<F_WIDTH;n++)
+        ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:178:5: warning: unused label 'loop_height' [-Wunused-label]
+    loop_height: for( int m=0;m< F_HEIGHT;m++)
+    ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:284:13: warning: unused label 'loop_width' [-Wunused-label]
+            loop_width: for(int n = 0; n < F_WIDTH; n++) {
+            ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:283:9: warning: unused label 'loop_height' [-Wunused-label]
+        loop_height: for(int m = 0; m < F_HEIGHT; m++) {
+        ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:351:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for( j = 0; j < ksize.width; j++ ) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:332:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for( i = 0; i < ksize.height; i++ )
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:371:2: warning: unused label 'loop_fill' [-Wunused-label]
+ loop_fill: for(int buf_row= 0;buf_row<W_HEIGHT;buf_row++)
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:447:1: warning: unused label 'channelloop' [-Wunused-label]
+channelloop: for(HLS_CHANNEL_T k= 0; k < channels; k++)
+^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:442:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j= 0;j< widthloop;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:441:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i= 0;i< heightloop;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:627:1: warning: unused label 'channelloop' [-Wunused-label]
+channelloop:    for(HLS_CHANNEL_T k= 0; k < channels; k++)
+^~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:624:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j= 0;j< widthloop;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:623:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i= 0;i< heightloop;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:762:13: warning: unused label 'channelloop' [-Wunused-label]
+            channelloop: for(HLS_CHANNEL_T k= 0; k < CH; k++)
+            ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:757:9: warning: unused label 'loop_width' [-Wunused-label]
+        loop_width: for (HLS_SIZE_T j= 0;j< widthloop;j++) {
+        ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:756:5: warning: unused label 'loop_height' [-Wunused-label]
+    loop_height: for(HLS_SIZE_T i= 0;i< heightloop;i++) {
+    ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:911:13: warning: unused label 'channelloop' [-Wunused-label]
+            channelloop: for(HLS_CHANNEL_T k=0; k<CH; k++)
+            ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:906:9: warning: unused label 'loop_width' [-Wunused-label]
+        loop_width: for (HLS_SIZE_T j= 0;j< widthloop;j++) {
+        ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:905:5: warning: unused label 'loop_height' [-Wunused-label]
+    loop_height: for(HLS_SIZE_T i= 0;i< heightloop;i++) {
+    ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1059:13: warning: unused label 'channelloop' [-Wunused-label]
+            channelloop: for(HLS_CHANNEL_T k= 0; k < channels; k++) {
+            ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1056:9: warning: unused label 'loop_width' [-Wunused-label]
+        loop_width: for (HLS_SIZE_T j= 0;j< widthloop;j++) {
+        ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1055:5: warning: unused label 'loop_height' [-Wunused-label]
+    loop_height: for(HLS_SIZE_T i= 0;i< heightloop;i++) {
+    ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1157:1: warning: unused label 'loop_iterations' [-Wunused-label]
+loop_iterations: for(int iter=0;iter<ITERATIONS-2;iter++)
+^~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1948:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (int j= 0; j < cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1947:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(int i= 0; i < rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1972:9: warning: unused variable 'sqsum' [-Wunused-variable]
+    int sqsum, sum=0;
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1975:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (int j= 0;j<cols+1;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:1974:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(int i= 0;i<rows+1;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2015:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (int j= 0;j<cols+1;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2014:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(int i= 0;i<rows+1;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2078:11: warning: unused variable 'j' [-Wunused-variable]
+    int i,j,ch;
+          ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2083:5: warning: unused label 'TAPS_LOOP' [-Wunused-label]
+    TAPS_LOOP : for (i = 0,t=0.5; i < NTAPS; i++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2080:1: warning: unused label 'CHAN_LOOP' [-Wunused-label]
+CHAN_LOOP : for (ch =0; ch<HLS_MAT_CN(T); ch++) {                               // Iterate over all color channels in parallel:
+^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2149:2: warning: unused label 'ROW_LOOP' [-Wunused-label]
+ ROW_LOOP: for (row = 0; row < rows + 3; row++) {
+ ^~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2150:5: warning: unused label 'COL_LOOP' [-Wunused-label]
+    COL_LOOP: for (col = 0; col < cols + 3; col++) {
+    ^~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2226:1: warning: unused label 'H_LOOP' [-Wunused-label]
+H_LOOP: for (int i = 0; i < NTAPS; i++) {
+^~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2242:1: warning: unused label 'V_LOOP' [-Wunused-label]
+V_LOOP: for (int i = 0; i < NTAPS - 1; i++) {
+^~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2476:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for(int k=0;k<HLS_MAT_CN(SRC_T);k++)
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2472:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (int j= 0;j<cols;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2471:1: warning: unused label 'loop_height' [-Wunused-label]
+loop_height: for(int i= 0;i<rows;i++) {
+^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2505:9: warning: unused label 'loop_channels' [-Wunused-label]
+        loop_channels: for(int k=0;k<HLS_MAT_CN(SRC_T);k++)
+        ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2501:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (int j= 0;j<cols;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2500:1: warning: unused label 'loop_height' [-Wunused-label]
+loop_height: for(int i= 0;i<rows;i++) {
+^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2785:1: warning: unused label 'channelloop' [-Wunused-label]
+channelloop:    for(HLS_CHANNEL_T k= 0; k < channels; k++)
+^~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2772:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j= 0;j< widthloop;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2771:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i= 0;i< heightloop;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2983:1: warning: unused label 'channelloop' [-Wunused-label]
+channelloop:    for(HLS_CHANNEL_T k= 0; k < channels; k++)
+^~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2969:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for (HLS_SIZE_T j= 0;j< widthloop;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgproc.h:2968:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i= 0;i< heightloop;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_histogram.h:97:13: warning: unused label 'latency_region' [-Wunused-label]
+            latency_region:{
+            ^~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_histogram.h:78:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for(int j=0;j<cols;j++)
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_histogram.h:76:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(int i=0;i<rows;i++)
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_histogram.h:152:2: warning: unused label 'loop_normalize' [-Wunused-label]
+ loop_normalize: for(int i=0;i<N;i++)
+ ^~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:163:9: warning: unused variable 'kernel_half' [-Wunused-variable]
+    int kernel_half=KERNEL_SIZE/2;
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:164:9: warning: unused variable 'result' [-Wunused-variable]
+    int result=fast_pixel_diff<PSize>(win,_threshold,flag_val,flag_d,flag);
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:230:9: warning: unused variable 'kernel_half' [-Wunused-variable]
+    int kernel_half=KERNEL_SIZE/2;
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:236:9: warning: unused variable 'index' [-Wunused-variable]
+    int index=0;
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:243:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for(HLS_SIZE_T j=0;j<cols+offset;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:242:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i=0;i<rows+offset;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:347:9: warning: unused variable 'kernel_half' [-Wunused-variable]
+    int kernel_half=KERNEL_SIZE/2;
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:360:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for(HLS_SIZE_T j=0;j<cols+offset;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:359:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i=0;i<rows+offset;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:469:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for(HLS_SIZE_T j=0;j<cols;j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_fast.h:468:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(HLS_SIZE_T i=0;i<rows;i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:191:9: warning: unused label 'loop_k' [-Wunused-label]
+        loop_k: for(int k=0; k<ACOL; k++)
+        ^~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:188:5: warning: unused label 'loop_j' [-Wunused-label]
+    loop_j: for(int j=0; j<BCOL; j++)
+    ^~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:186:2: warning: unused label 'loop_i' [-Wunused-label]
+ loop_i: for(int i=0; i<AROW; i++)
+ ^~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:230:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for( int j=0; j< cols; j++)
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:227:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for( int i=0; i< rows+ishift; i++)
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:290:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for( int j=0; j< cols; j++)
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:287:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for( int i=0; i< rows+ishift; i++)
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:538:11: warning: unused variable 'kr_gold' [-Wunused-variable]
+    float kr_gold = (1 + (((float)k3*(float)r2 + (float)k2)*(float)r2 + (float)k1)*(float)r2)/
+          ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:667:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for(int j=0; j< cols; j++) {
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:663:38: warning: unused variable 'rav' [-Wunused-variable]
+    static RangeAnalyzer<float> rau, rav;
+                                     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:664:33: warning: unused variable 'rauerr' [-Wunused-variable]
+    static RangeAnalyzer<float> rauerr, raverr;
+                                ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:663:33: warning: unused variable 'rau' [-Wunused-variable]
+    static RangeAnalyzer<float> rau, rav;
+                                ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:666:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for(int i=0; i< rows; i++) {
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_undistort.h:664:41: warning: unused variable 'raverr' [-Wunused-variable]
+    static RangeAnalyzer<float> rauerr, raverr;
+                                        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:131:2: warning: unused label 'loop_height' [-Wunused-label]
+ loop_height: for( int i = 0; i < rows; i++ )
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:115:5: warning: unused label 'loop_init_n' [-Wunused-label]
+    loop_init_n: for(int n=0;n<AngleN+2;n++)
+    ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:141:13: warning: unused label 'loop_angle' [-Wunused-label]
+            loop_angle: for(int n = 0; n < AngleN; n++ )
+            ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:133:5: warning: unused label 'loop_width' [-Wunused-label]
+    loop_width: for( int  j = 0; j < cols; j++ )
+    ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:122:2: warning: unused label 'loop_init' [-Wunused-label]
+ loop_init: for(int n = 0; n < AngleN; n++ )
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:113:2: warning: unused label 'loop_init_r' [-Wunused-label]
+ loop_init_r: for(int r=0;r<rhoN+2;r++)
+ ^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:157:2: warning: unused label 'loop_exit' [-Wunused-label]
+ loop_exit: for(int n = 0; n < AngleN; n++ )
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:226:17: warning: unused label 'loop_lines' [-Wunused-label]
+                loop_lines: for(int i=linesMax-2;i>=0;i--)
+                ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:242:17: warning: unused label 'loop_sum' [-Wunused-label]
+                loop_sum: for(int i=0;i<linesMax;i++)
+                ^~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:194:2: warning: unused label 'loop_n' [-Wunused-label]
+ loop_n: for(int n=0;n<AngleN+2;n++)
+ ^~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:184:2: warning: unused label 'loop_init' [-Wunused-label]
+ loop_init: for(int i=0;i<linesMax;i++)
+ ^~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:196:5: warning: unused label 'loop_r' [-Wunused-label]
+    loop_r: for(int r=0;r<rhoN+2;r++)
+    ^~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:264:1: warning: unused label 'loop_lines' [-Wunused-label]
+loop_lines: for(int i=0;i<linesMax;i++)
+^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_hough.h:324:2: warning: unused label 'loop_init' [-Wunused-label]
+ loop_init:  for(int i=0;i<180/theta;i++)
+ ^~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:171:1: warning: unused label 'loop_sum_init' [-Wunused-label]
+loop_sum_init:
+^~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:176:1: warning: unused label 'loop_sum_col' [-Wunused-label]
+loop_sum_col:
+^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:169:1: warning: unused label 'loop_sum_row' [-Wunused-label]
+loop_sum_row:
+^~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:455:1: warning: unused label 'loop_sad_compute' [-Wunused-label]
+loop_sad_compute:
+^~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:412:1: warning: unused label 'loop_sad_init' [-Wunused-label]
+loop_sad_init:
+^~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:379:9: warning: unused variable 'ndisp' [-Wunused-variable]
+    int ndisp = state.numberOfDisparities;
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:494:1: warning: unused label 'loop_unique_search_0' [-Wunused-label]
+loop_unique_search_0:
+^~~~~~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:403:1: warning: unused label 'loop_row' [-Wunused-label]
+loop_row:
+^~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:434:1: warning: unused label 'loop_get_data_from_linebuff' [-Wunused-label]
+loop_get_data_from_linebuff:
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:405:1: warning: unused label 'loop_mux' [-Wunused-label]
+loop_mux:
+^~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:441:1: warning: unused label 'loop_get_data_from_linebuff_with_offset' [-Wunused-label]
+loop_get_data_from_linebuff_with_offset:
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:510:1: warning: unused label 'loop_unique_search_1' [-Wunused-label]
+loop_unique_search_1:
+^~~~~~~~~~~~~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_stereobm.h:407:1: warning: unused label 'loop_col' [-Wunused-label]
+loop_col:
+^~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer.h:33:1: warning: '/*' within block comment [-Wcomment]
+/*
+^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer.h:169:4: warning: '/*' within block comment [-Wcomment]
+          /*
+          ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer.h:212:8: warning: unused label 'PROLOG_ROWS' [-Wunused-label]
+       PROLOG_ROWS: for (unsigned r = 0; r < K/2; ++r) {
+       ^~~~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer.h:210:6: warning: unused label 'PROLOG_COLS' [-Wunused-label]
+     PROLOG_COLS: for (unsigned c = 0; c < S; ++c) {
+     ^~~~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer.h:347:12: warning: unused label 'CONV_COLS' [-Wunused-label]
+           CONV_COLS: for (unsigned c = 0; c < S+1; ++c) {
+           ^~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer.h:346:10: warning: unused label 'CONV_ROWS' [-Wunused-label]
+         CONV_ROWS: for (unsigned r = 0; r < S+1; ++r) {
+         ^~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/InputConvLayer.h:107:11: warning: unused label 'PROLOG_ROWS' [-Wunused-label]
+          PROLOG_ROWS: for (unsigned r = 0; r < K/2; ++r) {
+          ^~~~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/InputConvLayer.h:105:9: warning: unused label 'PROLOG_COLS' [-Wunused-label]
+        PROLOG_COLS: for (unsigned c = 0; c < S; ++c) {
+        ^~~~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/InputConvLayer.h:115:11: warning: unused label 'CONV_COLS' [-Wunused-label]
+          CONV_COLS: for (unsigned c = 0; c < S+1; ++c) {
+          ^~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/InputConvLayer.h:114:9: warning: unused label 'CONV_ROWS' [-Wunused-label]
+        CONV_ROWS: for (unsigned r = 0; r < S+1; ++r) {
+        ^~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer2.h:66:8: warning: unused label 'PROLOG_ROWS' [-Wunused-label]
+       PROLOG_ROWS: for (unsigned r = 0; r < K/2; ++r) {
+       ^~~~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer2.h:64:6: warning: unused label 'PROLOG_COLS' [-Wunused-label]
+     PROLOG_COLS: for (unsigned c = 0; c < S; ++c) {
+     ^~~~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer2.h:205:12: warning: unused label 'CONV_COLS' [-Wunused-label]
+           CONV_COLS: for (unsigned c = 0; c < S+1; ++c) {
+           ^~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer2.h:204:10: warning: unused label 'CONV_ROWS' [-Wunused-label]
+         CONV_ROWS: for (unsigned r = 0; r < S+1; ++r) {
+         ^~~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/MaxLayer.h:69:9: warning: unused label 'MAX_COLS' [-Wunused-label]
+        MAX_COLS: for (unsigned c = 0; c < S2; ++c) {
+        ^~~~~~~~~~
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/MaxLayer.h:68:7: warning: unused label 'MAX_ROWS' [-Wunused-label]
+      MAX_ROWS: for (unsigned r = 0; r < S2; ++r) {
+      ^~~~~~~~~~
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:174:9: warning: 'static' function 'abs' declared in header file should be declared 'static inline' [-Wunneeded-internal-declaration]
+    int abs(int x) {
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:178:14: warning: unused function 'abs' [-Wunused-function]
+    long int abs(long int x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:185:10: warning: unused function 'pow2' [-Wunused-function]
+uint32_t pow2(uint32_t e)
+         ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:228:7: warning: unused function 'to_float' [-Wunused-function]
+float to_float(float v)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:400:15: warning: unused function 'operator<<' [-Wunused-function]
+std::ostream &operator << (std::ostream &os, const fp_struct<float> &s)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:416:1: warning: unused function 'castSingle' [-Wunused-function]
+castSingle(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:426:1: warning: unused function 'castSingle' [-Wunused-function]
+castSingle(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:434:1: warning: unused function 'dumpSingle' [-Wunused-function]
+dumpSingle(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:556:15: warning: unused function 'operator<<' [-Wunused-function]
+std::ostream &operator << (std::ostream &os, const fp_struct<double> &s)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:568:1: warning: unused function 'castDouble' [-Wunused-function]
+castDouble(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:578:1: warning: unused function 'castDouble' [-Wunused-function]
+castDouble(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:586:1: warning: unused function 'dumpDouble' [-Wunused-function]
+dumpDouble(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:715:15: warning: unused function 'operator<<' [-Wunused-function]
+std::ostream &operator << (std::ostream &os, const fp_struct<half> &s)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:727:1: warning: unused function 'castHalf' [-Wunused-function]
+castHalf(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:737:1: warning: unused function 'castHalf' [-Wunused-function]
+castHalf(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/utils/x_hls_utils.h:745:1: warning: unused function 'dumpHalf' [-Wunused-function]
+dumpHalf(
+^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:49:12: warning: unused function '__signbit' [-Wunused-function]
+static int __signbit(float x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:54:12: warning: unused function '__signbit' [-Wunused-function]
+static int __signbit(double x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:59:12: warning: unused function '__signbit' [-Wunused-function]
+static int __signbit(half x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:88:14: warning: unused function 'nanf' [-Wunused-function]
+static float nanf(const char *tagp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:92:13: warning: unused function 'half_nan' [-Wunused-function]
+static half half_nan(const char *tagp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:110:12: warning: unused function '__isfinite' [-Wunused-function]
+static int __isfinite(float x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:115:12: warning: unused function '__isfinite' [-Wunused-function]
+static int __isfinite(double x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:120:12: warning: unused function '__isfinite' [-Wunused-function]
+static int __isfinite(half x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:229:12: warning: unused function '__isnormal' [-Wunused-function]
+static int __isnormal(float x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:234:12: warning: unused function '__isnormal' [-Wunused-function]
+static int __isnormal(double x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:239:12: warning: unused function '__isnormal' [-Wunused-function]
+static int __isnormal(half x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:327:12: warning: unused function 'fpclassify' [-Wunused-function]
+static int fpclassify(half x)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:389:12: warning: unused function 'isequal' [-Wunused-function]
+static int isequal(double x, double y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:394:12: warning: unused function 'isequal' [-Wunused-function]
+static int isequal(float x, float y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:399:12: warning: unused function 'isequal' [-Wunused-function]
+static int isequal(half x, half y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:410:12: warning: unused function 'isgreater' [-Wunused-function]
+static int isgreater(double x, double y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:415:12: warning: unused function 'isgreater' [-Wunused-function]
+static int isgreater(float x, float y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:420:12: warning: unused function 'isgreater' [-Wunused-function]
+static int isgreater(half x, half y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:431:12: warning: unused function 'isgreaterequal' [-Wunused-function]
+static int isgreaterequal(double x, double y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:436:12: warning: unused function 'isgreaterequal' [-Wunused-function]
+static int isgreaterequal(float x, float y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:441:12: warning: unused function 'isgreaterequal' [-Wunused-function]
+static int isgreaterequal(half x, half y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:452:12: warning: unused function 'isless' [-Wunused-function]
+static int isless(double x, double y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:457:12: warning: unused function 'isless' [-Wunused-function]
+static int isless(float x, float y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:462:12: warning: unused function 'isless' [-Wunused-function]
+static int isless(half x, half y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:473:12: warning: unused function 'islessequal' [-Wunused-function]
+static int islessequal(double x, double y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:478:12: warning: unused function 'islessequal' [-Wunused-function]
+static int islessequal(float x, float y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:483:12: warning: unused function 'islessequal' [-Wunused-function]
+static int islessequal(half x, half y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:494:12: warning: unused function 'islessgreater' [-Wunused-function]
+static int islessgreater(double x, double y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:499:12: warning: unused function 'islessgreater' [-Wunused-function]
+static int islessgreater(float x, float y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:504:12: warning: unused function 'islessgreater' [-Wunused-function]
+static int islessgreater(half x, half y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:516:12: warning: unused function 'isnotequal' [-Wunused-function]
+static int isnotequal(double x, double y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:521:12: warning: unused function 'isnotequal' [-Wunused-function]
+static int isnotequal(float x, float y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_basic_math.h:526:12: warning: unused function 'isnotequal' [-Wunused-function]
+static int isnotequal(half x, half y)
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:76:13: warning: unused function 'half_fabs' [-Wunused-function]
+static half half_fabs (half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:90:14: warning: unused function 'absf' [-Wunused-function]
+static float absf (float x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:93:13: warning: unused function 'half_abs' [-Wunused-function]
+static half half_abs (half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:97:15: warning: unused function 'fma' [-Wunused-function]
+static double fma (double x, double y, double z) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:100:14: warning: unused function 'fma' [-Wunused-function]
+static float fma (float x, float y, float z) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:103:13: warning: unused function 'fma' [-Wunused-function]
+static half fma (half x, half y, half z) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:106:14: warning: unused function 'fmaf' [-Wunused-function]
+static float fmaf (float x, float y, float z) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:109:13: warning: unused function 'half_fma' [-Wunused-function]
+static half half_fma (half x, half y, half z) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:113:15: warning: unused function 'mad' [-Wunused-function]
+static double mad (double x, double y, double z) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:116:14: warning: unused function 'mad' [-Wunused-function]
+static float mad (float x, float y, float z) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:119:13: warning: unused function 'mad' [-Wunused-function]
+static half mad (half x, half y, half z) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:122:14: warning: unused function 'madf' [-Wunused-function]
+static float madf (float x, float y, float z) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:125:13: warning: unused function 'half_mad' [-Wunused-function]
+static half half_mad (half x, half y, half z) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:129:15: warning: unused function 'frexp' [-Wunused-function]
+static double frexp (double x, int* exp) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:132:14: warning: unused function 'frexp' [-Wunused-function]
+static float frexp (float x, int* exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:135:13: warning: unused function 'frexp' [-Wunused-function]
+static half frexp (half x, int* exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:138:14: warning: unused function 'frexpf' [-Wunused-function]
+static float frexpf (float x, int* exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:141:13: warning: unused function 'half_frexp' [-Wunused-function]
+static half half_frexp (half x, int* exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:145:15: warning: unused function 'ldexp' [-Wunused-function]
+static double ldexp (double x, int exp) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:148:14: warning: unused function 'ldexp' [-Wunused-function]
+static float ldexp (float x, int exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:151:13: warning: unused function 'ldexp' [-Wunused-function]
+static half ldexp (half x, int exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:154:14: warning: unused function 'ldexpf' [-Wunused-function]
+static float ldexpf (float x, int exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:157:13: warning: unused function 'half_ldexp' [-Wunused-function]
+static half half_ldexp (half x, int exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:164:14: warning: unused function 'scalbn' [-Wunused-function]
+static float scalbn (float x, int exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:167:13: warning: unused function 'scalbn' [-Wunused-function]
+static half scalbn (half x, int exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:170:14: warning: unused function 'scalbnf' [-Wunused-function]
+static float scalbnf (float x, int exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:173:13: warning: unused function 'half_scalbn' [-Wunused-function]
+static half half_scalbn (half x, int exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:177:15: warning: unused function 'scalbln' [-Wunused-function]
+static double scalbln (double x, long int exp) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:180:14: warning: unused function 'scalbln' [-Wunused-function]
+static float scalbln (float x, long int exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:183:13: warning: unused function 'scalbln' [-Wunused-function]
+static half scalbln (half x, long int exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:186:14: warning: unused function 'scalblnf' [-Wunused-function]
+static float scalblnf (float x, long int exp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:189:13: warning: unused function 'half_scalbln' [-Wunused-function]
+static half half_scalbln (half x, long int exp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:193:12: warning: unused function 'ilogb' [-Wunused-function]
+static int ilogb (double x) {
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:196:12: warning: unused function 'ilogb' [-Wunused-function]
+static int ilogb (float x) {
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:199:12: warning: unused function 'ilogb' [-Wunused-function]
+static int ilogb (half x) {
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:202:12: warning: unused function 'ilogbf' [-Wunused-function]
+static int ilogbf (float x) {
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:205:12: warning: unused function 'half_ilogb' [-Wunused-function]
+static int half_ilogb (half x) {
+           ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:209:15: warning: unused function 'fmax' [-Wunused-function]
+static double fmax(double x, double y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:212:14: warning: unused function 'fmax' [-Wunused-function]
+static float fmax(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:215:13: warning: unused function 'fmax' [-Wunused-function]
+static half fmax(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:218:14: warning: unused function 'fmaxf' [-Wunused-function]
+static float fmaxf(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:221:13: warning: unused function 'half_fmax' [-Wunused-function]
+static half half_fmax(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:225:15: warning: unused function 'fmin' [-Wunused-function]
+static double fmin(double x, double y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:228:14: warning: unused function 'fmin' [-Wunused-function]
+static float fmin(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:231:13: warning: unused function 'fmin' [-Wunused-function]
+static half fmin(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:234:14: warning: unused function 'fminf' [-Wunused-function]
+static float fminf(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:237:13: warning: unused function 'half_fmin' [-Wunused-function]
+static half half_fmin(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:241:15: warning: unused function 'fdim' [-Wunused-function]
+static double fdim(double x, double y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:244:14: warning: unused function 'fdim' [-Wunused-function]
+static float fdim(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:247:13: warning: unused function 'fdim' [-Wunused-function]
+static half fdim(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:250:14: warning: unused function 'fdimf' [-Wunused-function]
+static float fdimf(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:253:13: warning: unused function 'half_fdim' [-Wunused-function]
+static half half_fdim(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:257:15: warning: unused function 'maxmag' [-Wunused-function]
+static double maxmag(double x, double y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:260:14: warning: unused function 'maxmag' [-Wunused-function]
+static float maxmag(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:263:13: warning: unused function 'maxmag' [-Wunused-function]
+static half maxmag(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:266:14: warning: unused function 'maxmagf' [-Wunused-function]
+static float maxmagf(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:269:13: warning: unused function 'half_maxmag' [-Wunused-function]
+static half half_maxmag(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:273:15: warning: unused function 'minmag' [-Wunused-function]
+static double minmag(double x, double y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:276:14: warning: unused function 'minmag' [-Wunused-function]
+static float minmag(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:279:13: warning: unused function 'minmag' [-Wunused-function]
+static half minmag(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:282:14: warning: unused function 'minmagf' [-Wunused-function]
+static float minmagf(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:285:13: warning: unused function 'half_minmag' [-Wunused-function]
+static half half_minmag(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_normalize.h:129:14: warning: unused function 'find_normalization' [-Wunused-function]
+unsigned int find_normalization(int x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_normalize.h:143:14: warning: unused function 'find_normalization' [-Wunused-function]
+unsigned int find_normalization(short x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:109:8: warning: unused function 'floor' [-Wunused-function]
+double floor(double x)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:121:6: warning: unused function 'half_floor' [-Wunused-function]
+half half_floor(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:128:7: warning: unused function 'floor' [-Wunused-function]
+float floor(float x)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:133:6: warning: unused function 'floor' [-Wunused-function]
+half floor(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:173:8: warning: unused function 'ceil' [-Wunused-function]
+double ceil(double x)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:185:6: warning: unused function 'half_ceil' [-Wunused-function]
+half half_ceil(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:191:7: warning: unused function 'ceil' [-Wunused-function]
+float ceil(float x)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:196:6: warning: unused function 'ceil' [-Wunused-function]
+half ceil(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:227:8: warning: unused function 'trunc' [-Wunused-function]
+double trunc(double x)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:239:6: warning: unused function 'half_trunc' [-Wunused-function]
+half half_trunc(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:246:7: warning: unused function 'trunc' [-Wunused-function]
+float trunc(float x)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:251:6: warning: unused function 'trunc' [-Wunused-function]
+half trunc(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:299:8: warning: unused function 'round' [-Wunused-function]
+double round(double x)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:312:6: warning: unused function 'half_round' [-Wunused-function]
+half half_round(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:319:7: warning: unused function 'round' [-Wunused-function]
+float round(float x)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:324:6: warning: unused function 'round' [-Wunused-function]
+half round(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:397:8: warning: unused function 'rint' [-Wunused-function]
+double rint(double x)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:404:7: warning: unused function 'rintf' [-Wunused-function]
+float rintf(float x)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:410:6: warning: unused function 'half_rint' [-Wunused-function]
+half half_rint(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:416:8: warning: unused function 'nearbyint' [-Wunused-function]
+double nearbyint(double x)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:423:7: warning: unused function 'nearbyintf' [-Wunused-function]
+float nearbyintf(float x)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:429:6: warning: unused function 'half_nearbyint' [-Wunused-function]
+half half_nearbyint(half x)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:530:10: warning: unused function 'lrint' [-Wunused-function]
+long int lrint(double x) {
+         ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:536:15: warning: unused function 'llrint' [-Wunused-function]
+long long int llrint(double x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:541:10: warning: unused function 'lrintf' [-Wunused-function]
+long int lrintf(float x) {
+         ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:547:15: warning: unused function 'llrintf' [-Wunused-function]
+long long int llrintf(float x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:552:10: warning: unused function 'half_lrint' [-Wunused-function]
+long int half_lrint(half x) {
+         ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:558:15: warning: unused function 'half_llrint' [-Wunused-function]
+long long int half_llrint(half x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:563:10: warning: unused function 'lround' [-Wunused-function]
+long int lround(double x) {
+         ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:569:15: warning: unused function 'llround' [-Wunused-function]
+long long int llround(double x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:574:10: warning: unused function 'lroundf' [-Wunused-function]
+long int lroundf(float x) {
+         ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:580:15: warning: unused function 'llroundf' [-Wunused-function]
+long long int llroundf(float x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:585:10: warning: unused function 'half_lround' [-Wunused-function]
+long int half_lround(half x) {
+         ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:591:15: warning: unused function 'half_llround' [-Wunused-function]
+long long int half_llround(half x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:645:8: warning: unused function 'modf' [-Wunused-function]
+double modf(double x, double *intpart)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:657:6: warning: unused function 'half_modf' [-Wunused-function]
+half half_modf(half x, half *intpart)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:664:7: warning: unused function 'modf' [-Wunused-function]
+float modf(float x, float *intpart)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:669:6: warning: unused function 'modf' [-Wunused-function]
+half modf(half x, half *intpart)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:748:8: warning: unused function 'fract' [-Wunused-function]
+double fract(double x, double *intpart)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:754:7: warning: unused function 'fractf' [-Wunused-function]
+float fractf(float x, float *intpart)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_round.h:759:6: warning: unused function 'half_fract' [-Wunused-function]
+half half_fract(half x, half *intpart)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_log_.h:377:14: warning: unused function 'log' [-Wunused-function]
+static float log(float base)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_log_.h:381:15: warning: unused function 'log' [-Wunused-function]
+static double log(double base)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_log_.h:386:14: warning: unused function 'logf' [-Wunused-function]
+static float logf(float base)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_log_.h:425:14: warning: unused function 'log10' [-Wunused-function]
+static float log10(float base)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_log_.h:429:15: warning: unused function 'log10' [-Wunused-function]
+static double log10(double base)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_log_.h:434:14: warning: unused function 'log10f' [-Wunused-function]
+static float log10f(float base)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_pow.h:678:14: warning: unused function 'powf' [-Wunused-function]
+static float powf(float base, float exp)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_pow.h:683:13: warning: unused function 'half_pow' [-Wunused-function]
+static half half_pow(half base, half exp)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_pow.h:790:14: warning: unused function 'powrf' [-Wunused-function]
+static float powrf(float base, float exp)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_pow.h:795:13: warning: unused function 'half_powr' [-Wunused-function]
+static half half_powr(half base, half exp)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_pow.h:1370:14: warning: unused function 'rootnf' [-Wunused-function]
+static float rootnf(float base, int exp)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_pow.h:1375:13: warning: unused function 'half_rootn' [-Wunused-function]
+static half half_rootn(half base, int exp)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:750:15: warning: unused function 'fmod' [-Wunused-function]
+static double fmod(double x, double y){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:759:15: warning: unused function 'fmod' [-Wunused-function]
+static float  fmod(float x, float y){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:762:15: warning: unused function 'fmod' [-Wunused-function]
+static half   fmod(half x, half y){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:766:15: warning: unused function 'remainder' [-Wunused-function]
+static double remainder(double x, double y){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:775:15: warning: unused function 'remainder' [-Wunused-function]
+static float  remainder(float x, float y){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:778:15: warning: unused function 'remainder' [-Wunused-function]
+static half   remainder(half x, half y){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:782:15: warning: unused function 'remquo' [-Wunused-function]
+static double remquo(double x, double y, int* quo){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:791:15: warning: unused function 'remquo' [-Wunused-function]
+static float  remquo(float x, float y, int* quo){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:794:15: warning: unused function 'remquo' [-Wunused-function]
+static half   remquo(half x, half y, int* quo){
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:806:8: warning: unused function 'divide' [-Wunused-function]
+double divide(double x, double y){
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:816:6: warning: unused function 'half_divide' [-Wunused-function]
+half half_divide(half x, half y){
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:822:7: warning: unused function 'divide' [-Wunused-function]
+float divide(float x, float y){
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_fmod_rem_quo.h:826:6: warning: unused function 'divide' [-Wunused-function]
+half divide(half x, half y){
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_nextafter.h:87:8: warning: unused function 'nextafter' [-Wunused-function]
+double nextafter(double x, double y)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_nextafter.h:93:7: warning: unused function 'nextafterf' [-Wunused-function]
+float nextafterf(float x, float y)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_nextafter.h:99:6: warning: unused function 'half_nextafter' [-Wunused-function]
+half half_nextafter(half x, half y)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_nextafter.h:106:7: warning: unused function 'nextafter' [-Wunused-function]
+float nextafter(float x, float y)
+      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_nextafter.h:111:6: warning: unused function 'nextafter' [-Wunused-function]
+half nextafter(half x, half y)
+     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:528:13: warning: unused function 'sincos' [-Wunused-function]
+static void sincos(double t_in,
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:536:15: warning: unused function 'sin' [-Wunused-function]
+static double sin(double t_in) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:541:15: warning: unused function 'cos' [-Wunused-function]
+static double cos(double t_in) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:547:13: warning: unused function 'sincosf' [-Wunused-function]
+static void sincosf( float t_in,
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:556:14: warning: unused function 'sinf' [-Wunused-function]
+static float sinf(float t_in) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:562:14: warning: unused function 'cosf' [-Wunused-function]
+static float cosf(float t_in) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:568:13: warning: unused function 'half_sincos' [-Wunused-function]
+static void half_sincos(half t_in,
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:576:13: warning: unused function 'half_sin' [-Wunused-function]
+static half half_sin(half t_in) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_cordic.h:581:13: warning: unused function 'half_cos' [-Wunused-function]
+static half half_cos(half t_in) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:307:14: warning: unused function 'sin' [-Wunused-function]
+static float sin(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:311:14: warning: 'static' function 'sinf' declared in header file should be declared 'static inline' [-Wunneeded-internal-declaration]
+static float sinf(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:319:13: warning: unused function 'sin' [-Wunused-function]
+static half sin(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:329:14: warning: unused function 'cos' [-Wunused-function]
+static float cos(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:333:14: warning: 'static' function 'cosf' declared in header file should be declared 'static inline' [-Wunneeded-internal-declaration]
+static float cosf(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:341:13: warning: unused function 'cos' [-Wunused-function]
+static half cos(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:370:15: warning: unused function 'sinpi' [-Wunused-function]
+static double sinpi(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:374:14: warning: unused function 'sinpif' [-Wunused-function]
+static float sinpif(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:378:13: warning: unused function 'half_sinpi' [-Wunused-function]
+static half half_sinpi(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:384:15: warning: unused function 'cospi' [-Wunused-function]
+static double cospi(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:388:14: warning: unused function 'cospif' [-Wunused-function]
+static float cospif(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:392:13: warning: unused function 'half_cospi' [-Wunused-function]
+static half half_cospi(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:433:15: warning: unused function 'atan' [-Wunused-function]
+static double atan(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:438:14: warning: unused function 'atanf' [-Wunused-function]
+static float atanf(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:443:13: warning: unused function 'half_atan' [-Wunused-function]
+static half half_atan(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:448:15: warning: unused function 'atan2' [-Wunused-function]
+static double atan2(double y_in, double x_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:453:14: warning: unused function 'atan2f' [-Wunused-function]
+static float atan2f(float y_in, float x_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:458:13: warning: unused function 'half_atan2' [-Wunused-function]
+static half half_atan2(half y_in, half x_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:463:15: warning: unused function 'sinh' [-Wunused-function]
+static double sinh(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:467:14: warning: unused function 'sinhf' [-Wunused-function]
+static float sinhf(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:471:13: warning: unused function 'half_sinh' [-Wunused-function]
+static half half_sinh(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:476:15: warning: unused function 'cosh' [-Wunused-function]
+static double cosh(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:480:14: warning: unused function 'coshf' [-Wunused-function]
+static float coshf(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:484:13: warning: unused function 'half_cosh' [-Wunused-function]
+static half half_cosh(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:508:14: warning: unused function 'tanf' [-Wunused-function]
+static float tanf(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:521:15: warning: unused function 'tan' [-Wunused-function]
+static double tan(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:545:13: warning: unused function 'tan' [-Wunused-function]
+static half tan(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:555:14: warning: unused function 'log2f' [-Wunused-function]
+static float log2f(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:560:14: warning: unused function 'log10f' [-Wunused-function]
+static float log10f(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:565:14: warning: unused function 'logbf' [-Wunused-function]
+static float logbf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:584:15: warning: unused function 'log2' [-Wunused-function]
+static double log2(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:589:14: warning: unused function 'log2' [-Wunused-function]
+static float log2(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:593:13: warning: unused function 'log2' [-Wunused-function]
+static half log2(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:597:15: warning: unused function 'log10' [-Wunused-function]
+static double log10(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:602:14: warning: unused function 'log10' [-Wunused-function]
+static float log10(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:607:13: warning: unused function 'log10' [-Wunused-function]
+static half log10(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:611:15: warning: unused function 'logb' [-Wunused-function]
+static double logb(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:615:14: warning: unused function 'logb' [-Wunused-function]
+static float logb(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:619:13: warning: unused function 'logb' [-Wunused-function]
+static half logb(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:624:13: warning: unused function 'half_log' [-Wunused-function]
+static half half_log(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:627:13: warning: unused function 'half_log10' [-Wunused-function]
+static half half_log10(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:630:13: warning: unused function 'half_log2' [-Wunused-function]
+static half half_log2(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:633:13: warning: unused function 'half_logb' [-Wunused-function]
+static half half_logb(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:646:13: warning: unused function 'half_log1p' [-Wunused-function]
+static half half_log1p(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:649:14: warning: unused function 'log1pf' [-Wunused-function]
+static float log1pf(float x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:653:13: warning: unused function 'pow' [-Wunused-function]
+static half pow(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:656:14: warning: unused function 'pow' [-Wunused-function]
+static float pow(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:662:14: warning: 'static' function 'powf' declared in header file should be declared 'static inline' [-Wunneeded-internal-declaration]
+static float powf(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:665:13: warning: unused function 'half_pow' [-Wunused-function]
+static half half_pow(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:669:13: warning: unused function 'powr' [-Wunused-function]
+static half powr(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:672:14: warning: unused function 'powr' [-Wunused-function]
+static float powr(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:675:15: warning: unused function 'powr' [-Wunused-function]
+static double powr(double x, double y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:678:14: warning: unused function 'powrf' [-Wunused-function]
+static float powrf(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:681:13: warning: unused function 'half_powr' [-Wunused-function]
+static half half_powr(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:685:13: warning: unused function 'pown' [-Wunused-function]
+static half pown(half x, int y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:688:14: warning: unused function 'pown' [-Wunused-function]
+static float pown(float x, int y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:691:15: warning: unused function 'pown' [-Wunused-function]
+static double pown(double x, int y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:694:14: warning: unused function 'pownf' [-Wunused-function]
+static float pownf(float x, int y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:697:13: warning: unused function 'half_pown' [-Wunused-function]
+static half half_pown(half x, int y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:701:13: warning: unused function 'rootn' [-Wunused-function]
+static half rootn(half x, int y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:704:14: warning: unused function 'rootn' [-Wunused-function]
+static float rootn(float x, int y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:707:15: warning: unused function 'rootn' [-Wunused-function]
+static double rootn(double x, int y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:710:14: warning: unused function 'rootnf' [-Wunused-function]
+static float rootnf(float x, int y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:713:13: warning: unused function 'half_rootn' [-Wunused-function]
+static half half_rootn(half x, int y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_sqrt.h:342:15: warning: unused function 'hypot' [-Wunused-function]
+static double hypot(double x, double y) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:725:13: warning: unused function 'half_sqrt' [-Wunused-function]
+static half half_sqrt(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:730:13: warning: unused function 'half_recip' [-Wunused-function]
+static half half_recip(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:733:13: warning: unused function 'half_rsqrt' [-Wunused-function]
+static half half_rsqrt(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:737:13: warning: unused function 'cbrt' [-Wunused-function]
+static half cbrt(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:740:14: warning: unused function 'cbrt' [-Wunused-function]
+static float cbrt(float x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:743:15: warning: unused function 'cbrt' [-Wunused-function]
+static double cbrt(double x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:746:14: warning: unused function 'cbrtf' [-Wunused-function]
+static float cbrtf(float x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:749:13: warning: unused function 'half_cbrt' [-Wunused-function]
+static half half_cbrt(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:753:13: warning: unused function 'hypot' [-Wunused-function]
+static half hypot(half x, half y) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:756:14: warning: unused function 'hypot' [-Wunused-function]
+static float hypot(float x, float y) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:783:15: warning: unused function 'recip' [-Wunused-function]
+static double recip(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:788:14: warning: unused function 'recipf' [-Wunused-function]
+static float recipf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:793:15: warning: unused function 'rsqrt' [-Wunused-function]
+static double rsqrt(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:798:14: warning: unused function 'rsqrtf' [-Wunused-function]
+static float rsqrtf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:805:15: warning: unused function 'asin' [-Wunused-function]
+static double asin(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:809:15: warning: unused function 'acos' [-Wunused-function]
+static double acos(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:813:14: warning: unused function 'asin' [-Wunused-function]
+static float asin(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:817:14: warning: unused function 'acos' [-Wunused-function]
+static float acos(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:821:13: warning: unused function 'asin' [-Wunused-function]
+static half asin(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:825:13: warning: unused function 'acos' [-Wunused-function]
+static half acos(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:829:13: warning: unused function 'half_asin' [-Wunused-function]
+static half half_asin(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:833:13: warning: unused function 'half_acos' [-Wunused-function]
+static half half_acos(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:837:14: warning: unused function 'asinf' [-Wunused-function]
+static float asinf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:841:14: warning: unused function 'acosf' [-Wunused-function]
+static float acosf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_exp_.h:427:15: warning: unused function 'exp' [-Wunused-function]
+static double exp(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_exp_.h:440:14: warning: unused function 'expf' [-Wunused-function]
+static float expf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_exp_.h:646:14: warning: unused function 'exp2f' [-Wunused-function]
+static float exp2f(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_exp_.h:856:14: warning: unused function 'exp10f' [-Wunused-function]
+static float exp10f(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:857:13: warning: unused function 'exp' [-Wunused-function]
+static half exp(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:861:23: warning: unused function 'exp' [-Wunused-function]
+static ap_fixed<16,8> exp(ap_fixed<16,8> x)
+                      ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:865:22: warning: unused function 'exp' [-Wunused-function]
+static ap_fixed<8,4> exp(ap_fixed<8,4> x)
+                     ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:874:14: warning: unused function 'exp2' [-Wunused-function]
+static float exp2(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:878:13: warning: unused function 'exp2' [-Wunused-function]
+static half exp2(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:882:15: warning: unused function 'exp10' [-Wunused-function]
+static double exp10(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:887:14: warning: unused function 'exp10' [-Wunused-function]
+static float exp10(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:891:13: warning: unused function 'exp10' [-Wunused-function]
+static half exp10(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:896:14: warning: 'static' function 'expf' declared in header file should be declared 'static inline' [-Wunneeded-internal-declaration]
+static float expf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:901:14: warning: unused function 'exp2f' [-Wunused-function]
+static float exp2f(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:906:14: warning: unused function 'exp10f' [-Wunused-function]
+static float exp10f(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:912:13: warning: unused function 'half_exp' [-Wunused-function]
+static half half_exp(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:915:13: warning: unused function 'half_exp2' [-Wunused-function]
+static half half_exp2(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:918:13: warning: unused function 'half_exp10' [-Wunused-function]
+static half half_exp10(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:931:14: warning: unused function 'expm1f' [-Wunused-function]
+static float expm1f(float x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:934:13: warning: unused function 'half_expm1' [-Wunused-function]
+static half half_expm1(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:939:15: warning: unused function 'erf' [-Wunused-function]
+static double erf(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:943:14: warning: unused function 'erf' [-Wunused-function]
+static float erf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:947:13: warning: unused function 'erf' [-Wunused-function]
+static half erf(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:951:14: warning: unused function 'erff' [-Wunused-function]
+static float erff(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:955:15: warning: unused function 'erfc' [-Wunused-function]
+static double erfc(double x)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:959:14: warning: unused function 'erfc' [-Wunused-function]
+static float erfc(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:963:13: warning: unused function 'erfc' [-Wunused-function]
+static half erfc(half x)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:967:14: warning: unused function 'erfcf' [-Wunused-function]
+static float erfcf(float x)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:973:14: warning: unused function 'lgamma_rf' [-Wunused-function]
+static float lgamma_rf(float x, int *signgamp) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:976:13: warning: unused function 'half_lgamma_r' [-Wunused-function]
+static half half_lgamma_r(half x, int *signgamp) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:979:15: warning: unused function 'lgamma' [-Wunused-function]
+static double lgamma (double x) {
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:983:14: warning: unused function 'lgammaf' [-Wunused-function]
+static float lgammaf(float x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:987:13: warning: unused function 'half_lgamma' [-Wunused-function]
+static half half_lgamma(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:991:14: warning: unused function 'tgammaf' [-Wunused-function]
+static float tgammaf(float x) {
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:994:13: warning: unused function 'half_tgamma' [-Wunused-function]
+static half half_tgamma(half x) {
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1098:13: warning: unused function 'fir_blocksrl_Q15' [-Wunused-function]
+static void fir_blocksrl_Q15(short *in, short *taps, short *out, short *state, int incount, int numtaps)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_tanh.h:127:9: warning: unused function 'tanhf' [-Wunused-function]
+  float tanhf(float t_in){
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_tanh.h:132:8: warning: unused function 'half_tanh' [-Wunused-function]
+  half half_tanh(half t_in){
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_atanh.h:118:9: warning: unused function 'atanhf' [-Wunused-function]
+  float atanhf(float t_in){
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_atanh.h:123:8: warning: unused function 'half_atanh' [-Wunused-function]
+  half half_atanh(half t_in){
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1110:15: warning: unused function 'tanh' [-Wunused-function]
+static double tanh(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1115:14: warning: unused function 'tanh' [-Wunused-function]
+static float tanh(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1120:13: warning: unused function 'tanh' [-Wunused-function]
+static half tanh(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1125:15: warning: unused function 'atanh' [-Wunused-function]
+static double atanh(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1130:14: warning: unused function 'atanh' [-Wunused-function]
+static float atanh(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1135:13: warning: unused function 'atanh' [-Wunused-function]
+static half atanh(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_acosh.h:133:9: warning: unused function 'acoshf' [-Wunused-function]
+  float acoshf(float t_in){
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_acosh.h:138:8: warning: unused function 'half_acosh' [-Wunused-function]
+  half half_acosh(half t_in){
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_asinh.h:129:9: warning: unused function 'asinhf' [-Wunused-function]
+  float asinhf(float x)
+        ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_asinh.h:135:8: warning: unused function 'half_asinh' [-Wunused-function]
+  half half_asinh(half x)
+       ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1143:15: warning: unused function 'acosh' [-Wunused-function]
+static double acosh(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1148:14: warning: unused function 'acosh' [-Wunused-function]
+static float acosh(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1153:13: warning: unused function 'acosh' [-Wunused-function]
+static half acosh(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1158:15: warning: unused function 'asinh' [-Wunused-function]
+static double asinh(double t_in)
+              ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1163:14: warning: unused function 'asinh' [-Wunused-function]
+static float asinh(float t_in)
+             ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_math.h:1168:13: warning: unused function 'asinh' [-Wunused-function]
+static half asinh(half t_in)
+            ^
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls/hls_video_imgbase.h:113:12: warning: unused function 'borderInterpolate' [-Wunused-function]
+static int borderInterpolate( int p, int len, int borderType )
+           ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer.h:327:45: warning: unused typedef 'InputType' [-Wunused-local-typedef]
+     typedef typename InputArray::ElemType  InputType;
+                                            ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/NormLayer.h:52:43: warning: unused typedef 'InputType' [-Wunused-local-typedef]
+    typedef typename InputArray::ElemType InputType;
+                                          ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/NormLayer.h:71:43: warning: unused typedef 'InputType' [-Wunused-local-typedef]
+    typedef typename InputArray::ElemType InputType;
+                                          ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/InputConvLayer.h:77:44: warning: unused typedef 'OutputType' [-Wunused-local-typedef]
+    typedef typename OutputArray::ElemType OutputType;
+                                           ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/ConvLayer2.h:182:45: warning: unused typedef 'InputType' [-Wunused-local-typedef]
+     typedef typename InputArray::ElemType  InputType;
+                                            ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/MaxLayer.h:61:44: warning: unused typedef 'OutputType' [-Wunused-local-typedef]
+    typedef typename OutputArray::ElemType OutputType;
+                                           ^
+/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/DenseLayer.h:85:45: warning: unused typedef 'InputType' [-Wunused-local-typedef]
+    typedef typename InputArray::ElemType   InputType;
+                                            ^
+Compiling /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.cpp
+arm-linux-gnueabihf-g++ -c -I../utils -I../minizip -Wall -O3 -DHLS_COMPILE -O3 -std=c++0x -lminizip -lcrypto -lz -MMD -MP -D __SDSCC__ -MF/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.d     -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/target/aarch32-linux/include  -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.cpp -o cifar10_test_accuracy.o
+                 from /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.cpp:6:
+../utils/unzip.h:25:18: fatal error: zlib.h: No such file or directory
+ #include "zlib.h"
+                  ^
+compilation terminated.
+ERROR: [SdsCompiler 83-5019] Exiting sds++ : Error when calling 'arm-linux-gnueabihf-g++ -c -I../utils -I../minizip -Wall -O3 -DHLS_COMPILE -O3 -std=c++0x -lminizip -lcrypto -lz -MMD -MP -D __SDSCC__ -MF/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.d     -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/target/aarch32-linux/include  -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.cpp -o cifar10_test_accuracy.o'
+sds++ log file saved as /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_cifar10_test_accuracy.log
+ERROR: [SdsCompiler 83-5004] Build failed
+sds++ completed at Mon Dec 04 17:47:13 EST 2017

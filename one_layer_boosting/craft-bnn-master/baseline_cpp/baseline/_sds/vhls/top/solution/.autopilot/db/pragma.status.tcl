@@ -1,0 +1,1 @@
+lappend pragmaStatus0 {pragma "LATENCY" source "/home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/cifar10_test_accuracy.cpp" location "top" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'LATENCY' cannot be applied: Function 'top' does not exist in any synthesis source file."}

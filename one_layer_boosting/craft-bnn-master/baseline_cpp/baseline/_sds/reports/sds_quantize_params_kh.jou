@@ -1,0 +1,15 @@
+(c) Copyright 2012-2017 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2017.2 SW Build 1972098 on Wed Aug 23 11:35:17 MDT 2017
+# Start time    : Mon Dec 04 16:59:45 EST 2017
+# Command line  : sds++ -sds-pf zc706 -sds-hw top cifar10_test_accuracy.cpp -sds-end -poll-mode 1 -Wall -O3 -c -DHLS_COMPILE -O3 -std=c++0x -I../utils -I../minizip -lminizip -lcrypto -lz -MMD -MP -MFquantize_params_kh.d quantize_params_kh.cpp -o quantize_params_kh.o
+# Log file      : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_quantize_params_kh.log
+# Journal file  : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_quantize_params_kh.jou
+# Report file   : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_quantize_params_kh.rpt
+#-----------------------------------------------------------
+
+# Create data motion intermediate representation
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/bin/clang_wrapper -I../utils -I../minizip -Wall -DHLS_COMPILE -O3 -std=c++0x -lminizip -lcrypto -lz -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g     -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/target/aarch32-linux/include  -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include   -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1 -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1/arm-linux-gnueabihf -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1/backward -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/6.2.1/include -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/6.2.1/include-fixed -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 -emit-llvm -S /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/quantize_params_kh.cpp -o /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/.llvm/quantize_params_kh.s
+# ERROR: [SdsCompiler 83-5005] clang exited with non-zero code processing /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/quantize_params_kh.cpp
+# ERROR: [SdsCompiler 83-5004] Build failed
+# sds++ completed at Mon Dec 04 16:59:48 EST 2017

@@ -1,0 +1,56 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="sgn" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="init_linebuffer" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="init_linebuffer" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="add_pixel_to_buffers" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="conv" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="get_output" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="get_output" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="w"/>
+<option name="cyclic" positionalBoolean="type" value=""/>
+<option name="factor" value="M*K*K"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="get_output" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="get_output" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="get_output" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="init_linebuffer" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="init_linebuffer" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="add_pixel_to_buffers" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="conv" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="get_output" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="get_output" label="">
+<pragma name="PIPELINE"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

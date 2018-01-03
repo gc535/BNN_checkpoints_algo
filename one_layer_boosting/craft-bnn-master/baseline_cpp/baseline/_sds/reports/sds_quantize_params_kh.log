@@ -1,0 +1,34 @@
+(c) Copyright 2012-2017 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2017.2 SW Build 1972098 on Wed Aug 23 11:35:17 MDT 2017
+# Start time    : Mon Dec 04 16:59:45 EST 2017
+# Command line  : sds++ -sds-pf zc706 -sds-hw top cifar10_test_accuracy.cpp -sds-end -poll-mode 1 -Wall -O3 -c -DHLS_COMPILE -O3 -std=c++0x -I../utils -I../minizip -lminizip -lcrypto -lz -MMD -MP -MFquantize_params_kh.d quantize_params_kh.cpp -o quantize_params_kh.o
+# Log file      : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_quantize_params_kh.log
+# Journal file  : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_quantize_params_kh.jou
+# Report file   : /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_quantize_params_kh.rpt
+#-----------------------------------------------------------
+
+Create data motion intermediate representation
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/bin/clang_wrapper -I../utils -I../minizip -Wall -DHLS_COMPILE -O3 -std=c++0x -lminizip -lcrypto -lz -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g     -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/target/aarch32-linux/include  -I /opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include   -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1 -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1/arm-linux-gnueabihf -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/6.2.1/backward -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/6.2.1/include -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/6.2.1/include-fixed -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -I/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/SDK/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 -emit-llvm -S /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/quantize_params_kh.cpp -o /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/.llvm/quantize_params_kh.s
+clang: warning: -lminizip: 'linker' input unused
+clang: warning: -lcrypto: 'linker' input unused
+clang: warning: -lz: 'linker' input unused
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/Vivado_HLS/include/hls_fpo.h:62:2: warning: "Xilinx Floating Point Operator IP core does not provide simulation models for ARM architecture.  Automatically defining HLS_NO_XIL_FPO_LIB in order to avoid this library dependency, although bit-accurate simulation of some functions is no longer possible.  You can make this warning go away by adding this define yourself before including any other files."  [-W#warnings]
+#warning "Xilinx Floating Point Operator IP core does not provide simulation models for ARM architecture.  Automatically defining HLS_NO_XIL_FPO_LIB in order to avoid this library dependency, although bit-accurate simulation of some functions is no longer possible.  You can make this warning go away by adding this define yourself before including any other files." 
+ ^
+../minizip/zip.h:62:16: error: redefinition of 'tm_zip_s'
+typedef struct tm_zip_s
+               ^
+/usr/include/minizip/zip.h:89:16: note: previous definition is here
+typedef struct tm_zip_s
+               ^
+../minizip/zip.h:78:3: error: typedef redefinition with different types ('struct zip_fileinfo' vs 'struct zip_fileinfo')
+} zip_fileinfo;
+  ^
+/usr/include/minizip/zip.h:107:3: note: previous definition is here
+} zip_fileinfo;
+  ^
+ERROR: [SdsCompiler 83-5005] clang exited with non-zero code processing /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/quantize_params_kh.cpp
+sds++ log file saved as /home/gc535/ece5775/final_proj/v3/craft-bnn-master/baseline_cpp/baseline/_sds/reports/sds_quantize_params_kh.log
+ERROR: [SdsCompiler 83-5004] Build failed
+sds++ completed at Mon Dec 04 16:59:48 EST 2017
